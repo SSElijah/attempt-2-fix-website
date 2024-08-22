@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    /* Light background color for better contrast */
+    color: #333;
+    /* Dark text color for readability */
+    background-image: url(images/galaxy.jpg);
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers items horizontally */
+    justify-content: space-between;
+    /* Ensures space is distributed evenly */
+    height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #333;
+    width: 100%;
+    /* Ensure the header takes full width */
+    box-sizing: border-box;
+    /* Include padding and border in the element’s total width */
+    position: relative;
+    /* Ensures it doesn’t get clipped by its container */
+}
+
+
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header nav {
+    margin-bottom: 20px;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+    /* Increase spacing between items */
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    /* Larger padding for better click area */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.header nav ul li a:hover {
+    background-color: #333;
+    /* Dark background on hover */
+    color: #1c43c2;
+    /* Green text on hover */
+}
+
+/* Images */
+.header-image,
+.footer-image {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    /* Rounded corners for images */
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.column {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Rounded corners */
+    font-size: 1.2em;
+}
+
+.column-1 {
+    background-color: #ff7b00;
+}
+
+.column-2 {
+    background-color: #6a79ff;
+}
+
+.column-3 {
+    background-color: #00fd15;
+}
+
+.conclusion {
+    padding: 40px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+    /* Adjust margin for spacing */
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    text-align: center;
+    /* Center the text inside the conclusion */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+
+}
+
+/* (copied from styles.css) 8-20 CRITICISM - Return to Top Link Styles */
+.return-to-top {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    /* I decided to make it look more like a button rather than a floating link, used a dark background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    width: fit-content;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #4ebeff;
+    /* changed color -  top border */
+    width: 100%;
+    /* Meant for the footer takes full screen but cuts off for some reason */
+    box-sizing: border-box;
+   
+    position: relative;
+    /* Prevents clipping */
+}
+
+
+/* Responsive Styles UPDATED 8-15 ASSIGHMENT FOR CRITICISM ------ also lowered some of the dimentions by 1.0 */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        /* I tried getting it to work, meat to stack columns vertically for smaller screens */
+    }
+
+    .column {
+        margin-bottom: 20px;
+    
+    }
+
+    .header-image,
+    .footer-image {
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.4em;
+    }
+
+    .header nav ul li {
+        margin: 0 10px;
+    }
+
+    .header nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+
+    .column {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .conclusion {
+        padding: 20px;
+        font-size: 0.9em;
+        margin: 20px 0;
+    }
+
+    .header-image,
+    .footer-image {
+        height: 190px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header h1 {
+        font-size: 1.1em;
+    }
+
+    .header nav ul li {
+        margin: 0 4px;
+    }
+
+    .header nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .column {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .conclusion {
+        padding: 15px;
+        font-size: 0.9em;
+        margin: 15px 0;
+    }
+
+    .header-image,
+    .footer-image {
+        height: 140px;
+    }
+}

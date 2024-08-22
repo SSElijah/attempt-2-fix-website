@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    /* Basic font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    /* Light background for readability */
+    color: #333;
+    /* Dark text for contrast */
+}
+
+/* Header Styles */
+header {
+    background-image: url(images/Ocean.jpg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    /* Rounded profile picture */
+    margin-top: 15px;
+    max-width: 300px;
+    height: auto;
+}
+
+header h1,
+header h2,
+header h3 {
+    margin: 10px 0;
+}
+
+header h1 {
+    font-size: 4.5em;
+    /* Larger heading 8-15 ADDED NEW FONT FAMILY */
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header h2 {
+    font-size: 1.8em;
+    /* Medium heading */
+}
+
+header h3 {
+    font-size: 1.2em;
+    /* Smaller heading */
+}
+
+/* Navigation Styles */
+
+nav {
+    background-color: #333;
+    /* Dark background for nav bar */
+    padding: 10px 0;
+    width: 100vw;
+    /* Full viewport width */
+    position: relative;
+    /* FIXED ISSUE - covers the entire screen */
+    left: 50%;
+    /* Fix 2 - Start the nav at the center */
+    right: 50%;
+    /* Fix 3 - the nav at the center */
+    margin-left: -50vw;
+    /* Fix 4 - Move it left to cover the entire width */
+    margin-right: -50vw;
+    /* Fix 5 - Move it right to cover the entire width */
+    /* Gray bar now extends across screen, had to add position. */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /*This is what makes each tab more centered */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    /* Rounded corners for links when hovering, not really that big of a change */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    /* Darker background on hover */
+    color: rgb(37, 178, 243);
+    /* Blue text on hover, I can change it to anything brighter to make the words stand out */
+}
+
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    /* Darker background on hover */
+    color: rgb(37, 178, 243);
+    /* Blue text on hover */
+}
+
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main p {
+    line-height: 1.6;
+    /* Easy to read or easier  */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    width: 100%;
+    /* I changed this 8-21 so it Takes up more width of the screen */
+}
+
+.sections-warper {
+    width: 100%;
+    /* Wider section to take up more screen space */
+    max-width: 1200px;
+    /* Readability related */
+}
+
+#sections {
+    margin-top: 20px;
+}
+
+section {
+    background-color: #fff;
+    /* White background for sections */
+    border: 1px solid #ddd;
+    /* Light border */
+    padding: 20px;
+    border-radius: 8px;
+    /* Rounded corners */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Small shadow */
+}
+
+
+section h2 {
+    font-size: 1.5em;
+    /* Heading size */
+    margin-bottom: 15px;
+}
+
+section ul,
+section ol {
+    padding-left: 20px;
+}
+
+/* 8-20 CRITICISM - Return to Top Link Styles */
+.return-to-top {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    /* I decided to make it look more like a button rather than a floating link, used a dark background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    width: fit-content;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.return-to-top:hover {
+    background-color: #555;
+    /* Darker background on hover */
+    color: rgb(37, 178, 243);
+    /* Blue text on hover */
+}
+
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    /* Dark background for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #4ebeff;
+    /* Green top border ---- CHANGED to blue */
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    header h3 {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
